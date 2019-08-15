@@ -316,6 +316,7 @@
                         <outlet property="person4" destination="zuF-6g-1Pp" id="D8N-UN-vXe"/>
                         <outlet property="person5" destination="Me7-7N-lAE" id="zLB-ia-IXM"/>
                         <segue destination="HJZ-Rr-xTd" kind="show" identifier="ToLikedList" id="e2h-Zu-Eti"/>
+                        <segue destination="uWc-26-79I" kind="show" identifier="noneResult" id="61K-Yf-h0d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -326,6 +327,37 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="786.95652173913049" y="37.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="y9b-an-I6e">
+            <objects>
+                <viewController id="uWc-26-79I" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YMN-XV-D67">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="誰か一人くらい選んでください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhP-N8-RIE">
+                                <rect key="frame" x="38.5" y="259" width="243" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="pWZ-yW-Jo5"/>
+                                    <constraint firstAttribute="height" constant="50" id="xM5-mT-dyf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JhP-N8-RIE" firstAttribute="centerX" secondItem="YMN-XV-D67" secondAttribute="centerX" id="To7-rn-cX7"/>
+                            <constraint firstItem="JhP-N8-RIE" firstAttribute="centerY" secondItem="YMN-XV-D67" secondAttribute="centerY" id="aKV-5c-aug"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Whb-LZ-wqI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ApO-El-Kj1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1627" y="-679"/>
         </scene>
         <!--Liked List Table View Controller-->
         <scene sceneID="QKr-Fj-0XI">

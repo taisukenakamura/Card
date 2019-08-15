@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  NoneResultTableViewCell.swift
 //  Card
 //
 //  Created by 中村泰輔 on 2019/08/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class NoneResultTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +20,5 @@ class TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

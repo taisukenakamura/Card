@@ -27,10 +27,18 @@ class ViewController: UIViewController {
     var personList: [UIView] = []
     // 選択されたカードの数
     var selectedCardCount: Int = 0
-    // ユーザーリスト
-    let nameList: [String] = ["津田梅子","ジョージワシントン","ガリレオガリレイ","板垣退助","ジョン万次郎"]
+    // ユーザーデータ
+    let userData: [[String : String]] = [
+        ["imageName" : "津田梅子","name" : "津田梅子", "job" : "教師", "place" : "千葉"],
+        ["imageName" : "ジョージワシントン", "name" : "ジョージワシントン", "job" : "大統領", "place" : "アメリカ"],
+        ["imageName" : "ガリレオガリレイ", "name" : "ガリレオガリレイ" , "job" : "物理学者", "place" : "高知"],
+        ["imageName" : "板垣退助","name": "板垣退助", "job": "議員", "place": "高知"],
+        ["imageName" : "ジョン万次郎", "name": "ジョン万次郎", "job": "冒険家", "place": "アメリカ"]
+    ]
+   
+    
     // 「いいね」をされた名前の配列
-    var likedName: [String] = []
+    var likedUser : [[String : String]] = []
 
 
     // viewのレイアウト処理が完了した時に呼ばれる
@@ -55,7 +63,7 @@ class ViewController: UIViewController {
         // カウント初期化
         selectedCardCount = 0
         // リスト初期化
-        likedName = []
+        likedUser = []
     }
 
     // セグエによる遷移前に呼ばれる
@@ -65,7 +73,7 @@ class ViewController: UIViewController {
             let vc = segue.destination as! LikedListTableViewController
 
             // LikedListTableViewControllerのlikedName(左)にViewCountrollewのLikedName(右)を代入
-            vc.likedName = likedName
+            vc.likedUser = likedUser
         }
     }
 
@@ -157,7 +165,7 @@ class ViewController: UIViewController {
                 // likeImageを隠す
                 likeImage.isHidden = true
                 // いいねリストに追加
-                likedName.append(nameList[selectedCardCount])
+                likedUser.append(userData[selectedCardCount])
                 // 次のカードへ
                 selectedCardCount += 1
                 
@@ -207,7 +215,7 @@ class ViewController: UIViewController {
             self.personList[self.selectedCardCount].center = CGPoint(x:self.personList[self.selectedCardCount].center.x + 500, y:self.personList[self.selectedCardCount].center.y)
         })
         // いいねリストに追加
-        likedName.append(nameList[selectedCardCount])
+        likedUser.append(userData[selectedCardCount])
         selectedCardCount += 1
         // 画面遷移
         if selectedCardCount >= personList.count {

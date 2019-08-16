@@ -139,6 +139,37 @@ class ViewController: UIViewController {
             likeImage.image = #imageLiteral(resourceName: "よくないね")
             likeImage.isHidden = false
         }
+        
+        func setUserCard(showUserNum : Int){
+            // 表示されているユーザーのカードを格納
+            let user = userList[showUserNum]
+            // 表示されるViewについてデータを入れていく
+            if selectedCardCount == 0 {
+                // 背景色
+                person1.backgroundColor = user.backgroundColor
+                // 名前
+                personName1.text = user.name
+                // 仕事
+                personJob1.text = user.job
+                // 出身地
+                personPlace1.text = user.place
+                // 画像表示
+                personImageView1.image = user.imageView
+                
+            } else {
+                // 背景色
+                person2.backgroundColor = user.backgroundColor
+                // 名前
+                personName2.text = user.name
+                // 仕事
+                personJob2.text = user.job
+                // 出身地
+                personPlace2.text = user.place
+                // 画像表示
+                personImageView2.image = user.imageView
+            }
+            
+        }
 
         // 元の位置に戻す処理
         if sender.state == UIGestureRecognizer.State.ended {

@@ -36,10 +36,8 @@ class ViewController: UIViewController {
         ["imageName" : "ジョン万次郎", "name": "ジョン万次郎", "job": "冒険家", "place": "アメリカ"]
     ]
     
-    
     // 「いいね」をされた名前の配列
     var likedUser : [[String : String]] = []
-    
     
     // viewのレイアウト処理が完了した時に呼ばれる
     override func viewDidLayoutSubviews() {

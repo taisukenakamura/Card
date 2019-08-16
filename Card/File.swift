@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+struct UserData {
+    
+    var imageView: UIImage
+    var name: String
+    var job: String
+    var place: String
+    var backgroundColor: UIColor
+}

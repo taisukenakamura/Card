@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     let userData: [[String : String]] = [
         ["imageName" : "津田梅子","name" : "津田梅子", "job" : "教師", "place" : "千葉"],
         ["imageName" : "ジョージワシントン", "name" : "ジョージワシントン", "job" : "大統領", "place" : "アメリカ"],
-        ["imageName" : "ガリレオガリレイ", "name" : "ガリレオガリレイ" , "job" : "物理学者", "place" : "高知"],
+        ["imageName" : "ガリレオガリレイ", "name" : "ガリレオガリレイ" , "job" : "物理学者", "place" : "イタリア"],
         ["imageName" : "板垣退助","name": "板垣退助", "job": "議員", "place": "高知"],
         ["imageName" : "ジョン万次郎", "name": "ジョン万次郎", "job": "冒険家", "place": "アメリカ"]
     ]
